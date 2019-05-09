@@ -1,0 +1,11 @@
+src/drivers/libriscv__mmachine__freedom-e310-arty_a-sifive,fe310-g000,prci.o: \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/src/drivers/sifive,fe310-g000,prci.c \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,fe310-g000,prci.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/compiler.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/io.h
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,fe310-g000,prci.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/compiler.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/io.h:

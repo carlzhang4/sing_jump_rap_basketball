@@ -1,0 +1,245 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1994
+License: Customer
+
+Current time: 	Sun Apr 14 07:57:44 PDT 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Ubuntu
+OS Version: 4.15.0-47-generic
+OS Architecture: amd64
+Available processors (cores): 2
+
+Display: :0
+Screen size: 1440x755
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 32 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/home/tanqinhan/Desktop/vivado/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/home/tanqinhan/Desktop/vivado/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	tanqinhan
+User home directory: /home/tanqinhan
+User working directory: /home/tanqinhan/Desktop/riscv/freedom-e-sdk
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/tanqinhan/Desktop/vivado/Vivado
+HDI_APPROOT: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+RDI_DATADIR: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/data
+RDI_BINDIR: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/tanqinhan/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/tanqinhan/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /home/tanqinhan/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/home/tanqinhan/Desktop/vivado/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/tanqinhan/Desktop/riscv/freedom-e-sdk/vivado.log
+Vivado journal file location: 	/home/tanqinhan/Desktop/riscv/freedom-e-sdk/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1994-ubuntu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+XILINX_SDK: /home/tanqinhan/Desktop/vivado/SDK/2018.2
+XILINX_VIVADO: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+XILINX_VIVADO_HLS: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+
+
+GUI allocated memory:	130 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 755 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 50 MB (+49657kb) [00:00:11]
+// [Engine Memory]: 745 MB (+629762kb) [00:00:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 755 MB. GUI used memory: 31 MB. Current time: 4/14/19 7:57:46 AM PDT
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr", 0); // q (O, ck)
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 833 MB (+52838kb) [00:00:27]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 891 MB (+17874kb) [00:00:32]
+// [GUI Memory]: 58 MB (+5942kb) [00:00:33]
+// [GUI Memory]: 62 MB (+1633kb) [00:00:35]
+// [GUI Memory]: 73 MB (+7443kb) [00:00:36]
+// Tcl Message: open_project /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/tanqinhan/Desktop/vivado/Vivado/2018.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 950 MB. GUI used memory: 44 MB. Current time: 4/14/19 7:58:08 AM PDT
+// [Engine Memory]: 951 MB (+15242kb) [00:00:38]
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 6146.176 ; gain = 175.645 ; free physical = 103 ; free virtual = 10766 
+// Project name: RISCV-k7; location: /home/tanqinhan/Desktop/riscv/RISCV-k7; part: xc7k325tffg676-1
+// Elapsed time: 17 seconds
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [GUI Memory]: 76 MB (+12kb) [00:00:54]
+// Tcl Message: open_hw 
+// [Engine Memory]: 1,012 MB (+14317kb) [00:00:54]
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,014 MB. GUI used memory: 47 MB. Current time: 4/14/19 7:58:26 AM PDT
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:18:37     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/201612300081 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,556 MB (+517710kb) [00:01:03]
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// PAPropertyPanels.initPanels (xc7k325t_0) elapsed time: 0.2s
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7k325t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 6773.488 ; gain = 7.172 ; free physical = 119 ; free virtual = 10491 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 13 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Program Device"); // bx (ck)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/201612300081 
+// n (ck): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// [GUI Memory]: 81 MB (+940kb) [00:01:21]
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,574 MB. GUI used memory: 50 MB. Current time: 4/14/19 7:58:56 AM PDT
+// Elapsed time: 10 seconds
+dismissDialog("Close Hardware Target"); // n (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn-JTAG-HS2-201612300081" may be locked by another hw_server. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn-JTAG-HS2-201612300081" may be locked by another hw_server.  
+// a (ck): Critical Messages: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+// [GUI Memory]: 86 MB (+533kb) [00:02:02]
+// Elapsed time: 36 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// PAPropertyPanels.initPanels (sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v) elapsed time: 0.2s
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 179, 35); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,603 MB. GUI used memory: 65 MB. Current time: 4/14/19 8:00:11 AM PDT
+// [GUI Memory]: 100 MB (+10104kb) [00:02:42]
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 103, 99); // ce (w, ck)
+// [GUI Memory]: 120 MB (+16136kb) [00:02:47]
+// [Engine Memory]: 1,678 MB (+46041kb) [00:02:47]
+// [GUI Memory]: 127 MB (+843kb) [00:03:08]
+// Elapsed time: 24 seconds
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 499, 96); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "0018bb2"); // l (aQ, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,703 MB. GUI used memory: 65 MB. Current time: 4/14/19 8:00:51 AM PDT
+// Elapsed time: 11 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "10014000"); // l (aQ, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 539, 23); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1229 ms. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 432ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1592ms to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1448ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2692 ms. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 3239ms to process. Increasing delay to 4000 ms.

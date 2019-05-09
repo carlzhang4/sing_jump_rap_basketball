@@ -1,0 +1,2 @@
+gloss/crt0.o: \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/gloss/crt0.S

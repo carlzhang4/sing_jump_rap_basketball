@@ -1,0 +1,45 @@
+[submodule "software/hello"]
+	path = software/hello
+	url = https://github.com/sifive/example-hello.git
+[submodule "freedom-metal"]
+	path = freedom-metal
+	url = https://github.com/sifive/freedom-metal.git
+[submodule "scripts/elf2hex"]
+	path = scripts/elf2hex
+	url = https://github.com/sifive/elf2hex.git
+[submodule "software/example-itim"]
+	path = software/example-itim
+	url = https://github.com/sifive/example-itim.git
+[submodule "software/software-interrupt"]
+	path = software/software-interrupt
+	url = https://github.com/sifive/example-software-interrupt.git
+[submodule "software/timer-interrupt"]
+	path = software/timer-interrupt
+	url = https://github.com/sifive/example-timer-interrupt.git
+[submodule "software/local-interrupt"]
+	path = software/local-interrupt
+	url = https://github.com/sifive/example-local-interrupt.git
+[submodule "software/return-fail"]
+	path = software/return-fail
+	url = https://github.com/sifive/example-return-fail.git
+[submodule "software/return-pass"]
+	path = software/return-pass
+	url = https://github.com/sifive/example-return-pass.git
+[submodule "software/example-pmp"]
+	path = software/example-pmp
+	url = https://github.com/sifive/example-pmp.git
+[submodule "doc/html"]
+	path = doc/html
+	url = https://github.com/sifive/freedom-e-sdk-docs.git
+[submodule "software/example-spi"]
+	path = software/example-spi
+	url = https://github.com/sifive/example-spi.git
+[submodule "software/empty"]
+	path = software/empty
+	url = https://github.com/sifive/example-empty.git
+[submodule "software/sifive-welcome"]
+	path = software/sifive-welcome
+	url = https://github.com/sifive/sifive-welcome
+[submodule "software/dhrystone"]
+	path = software/dhrystone
+	url = https://github.com/sifive/benchmark-dhrystone
