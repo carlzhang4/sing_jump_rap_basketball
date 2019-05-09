@@ -1,0 +1,2 @@
+src/libriscv__mmachine__freedom-e310-arty_a-entry.o: \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/src/entry.S

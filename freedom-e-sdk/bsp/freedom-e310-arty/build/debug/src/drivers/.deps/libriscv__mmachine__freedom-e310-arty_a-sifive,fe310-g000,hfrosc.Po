@@ -1,0 +1,20 @@
+src/drivers/libriscv__mmachine__freedom-e310-arty_a-sifive,fe310-g000,hfrosc.o: \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/src/drivers/sifive,fe310-g000,hfrosc.c \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,fe310-g000,hfrosc.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,fe310-g000,prci.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/compiler.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/io.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/clock.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.2.0/include/stddef.h
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,fe310-g000,hfrosc.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,fe310-g000,prci.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/compiler.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/io.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/clock.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.2.0/include/stddef.h:

@@ -1,0 +1,98 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Apr 13 03:14:29 2019
+# Process ID: 1911
+# Current directory: /home/tanqinhan/Desktop/riscv/freedom-e-sdk
+# Command line: vivado
+# Log file: /home/tanqinhan/Desktop/riscv/freedom-e-sdk/vivado.log
+# Journal file: /home/tanqinhan/Desktop/riscv/freedom-e-sdk/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.xpr}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+open_project /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr
+reset_run synth_1
+reset_run reset_sys_synth_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]

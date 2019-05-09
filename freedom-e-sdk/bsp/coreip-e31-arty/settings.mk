@@ -1,0 +1,5 @@
+RISCV_ARCH=rv32imac
+RISCV_ABI=ilp32
+RISCV_CMODEL=medany
+
+TARGET_TAGS=fpga openocd

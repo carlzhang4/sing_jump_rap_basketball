@@ -1,0 +1,588 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1977
+License: Customer
+
+Current time: 	Sat Apr 13 01:07:54 PDT 2019
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Ubuntu
+OS Version: 4.15.0-47-generic
+OS Architecture: amd64
+Available processors (cores): 2
+
+Display: :0
+Screen size: 1440x755
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 32 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/home/tanqinhan/Desktop/vivado/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/home/tanqinhan/Desktop/vivado/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	tanqinhan
+User home directory: /home/tanqinhan
+User working directory: /home/tanqinhan/Desktop/riscv/freedom-e-sdk
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/tanqinhan/Desktop/vivado/Vivado
+HDI_APPROOT: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+RDI_DATADIR: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/data
+RDI_BINDIR: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/tanqinhan/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/tanqinhan/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /home/tanqinhan/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/home/tanqinhan/Desktop/vivado/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/tanqinhan/Desktop/riscv/freedom-e-sdk/vivado.log
+Vivado journal file location: 	/home/tanqinhan/Desktop/riscv/freedom-e-sdk/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1977-ubuntu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: /home/tanqinhan/Desktop/vivado/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+XILINX_SDK: /home/tanqinhan/Desktop/vivado/SDK/2018.2
+XILINX_VIVADO: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+XILINX_VIVADO_HLS: /home/tanqinhan/Desktop/vivado/Vivado/2018.2
+
+
+GUI allocated memory:	148 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 785 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 54 MB (+54194kb) [00:00:11]
+// [Engine Memory]: 766 MB (+651704kb) [00:00:11]
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr", 1); // q (O, ck)
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 796 MB. GUI used memory: 32 MB. Current time: 4/13/19 1:07:56 AM PDT
+// [Engine Memory]: 826 MB (+22721kb) [00:00:16]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 895 MB (+28734kb) [00:00:21]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 946 MB (+7293kb) [00:00:26]
+// [GUI Memory]: 65 MB (+8391kb) [00:00:28]
+// Tcl Message: open_project /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/tanqinhan/Desktop/vivado/Vivado/2018.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 6155.398 ; gain = 180.844 ; free physical = 104 ; free virtual = 10845 
+// Project name: RISCV-k7; location: /home/tanqinhan/Desktop/riscv/RISCV-k7; part: xc7k325tffg676-1
+// Elapsed time: 18 seconds
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 74 MB (+6693kb) [00:00:31]
+// [Engine Memory]: 994 MB (+596kb) [00:00:31]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 995 MB. GUI used memory: 43 MB. Current time: 4/13/19 1:08:16 AM PDT
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:18:37     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/201612300081 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,581 MB. GUI used memory: 48 MB. Current time: 4/13/19 1:09:13 AM PDT
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1066ms to process. Increasing delay to 2000 ms.
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 6761.340 ; gain = 540.004 ; free physical = 112 ; free virtual = 10209 
+// TclEventType: HW_DEVICE_CHANGE
+// [Engine Memory]: 1,583 MB (+564778kb) [00:01:35]
+// Tcl Message: set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 13 seconds
+dismissDialog("Auto Connect"); // bx (ck)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 463ms to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 80 MB (+2230kb) [00:01:38]
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// PAPropertyPanels.initPanels (xc7k325t_0) elapsed time: 0.5s
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7k325t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 6780.410 ; gain = 0.000 ; free physical = 113 ; free virtual = 10163 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 12 seconds
+// [GUI Memory]: 86 MB (+2140kb) [00:01:56]
+// Elapsed time: 11 seconds
+dismissDialog("Program Device"); // bx (ck)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/201612300081 
+// TclEventType: HW_SERVER_UPDATE
+// n (ck): Close Hardware Target: addNotify
+// Elapsed time: 64 seconds
+dismissDialog("Close Hardware Target"); // n (ck)
+// [GUI Memory]: 92 MB (+1140kb) [00:03:49]
+// Elapsed time: 86 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+// Elapsed time: 69 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Project Manager", "Project Manager", "DesignTask.PROJECT_MANAGER");
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// A (ck): Close Project: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Close Project"); // A (ck)
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, ila.xdc]", 7, false, false, false, false, false, true); // B (D, ck) - Double Click
+// PAPropertyPanels.initPanels (arty-config.xdc) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-config.xdc]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, reset_sys.xdc]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, reset_sys.xdc]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-config.xdc]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, reset_sys_board.xdc]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, reset_sys.xdc]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 8, false); // B (D, ck)
+selectCodeEditor("arty-master.xdc", 296, 85); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 108, 164); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,635 MB. GUI used memory: 62 MB. Current time: 4/13/19 1:14:05 AM PDT
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 189, 98); // ce (w, ck)
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 147, 118); // ce (w, ck)
+// [Engine Memory]: 1,698 MB (+37492kb) [00:06:28]
+// [GUI Memory]: 149 MB (+55538kb) [00:06:33]
+// Elapsed time: 14 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "qspi"); // l (aQ, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 365, 80); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("arty-master.xdc", 285, 203); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("arty-master.xdc", 332, 234); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 332, 234, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 332, 234); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 338, 216); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 338, 216, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 338, 216); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 349, 194); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 349, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 349, 194); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 364, 171); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 364, 171, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 364, 171); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 153); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 153, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 356, 153); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 139); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 139, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 356, 139); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 139); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 139, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 356, 139); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 354, 131); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 354, 131, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 354, 131); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 353, 111); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 353, 111, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 356, 100); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 356, 100, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 356, 100); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 343, 114); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 343, 114, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 343, 114); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 337, 181); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 337, 181, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 337, 181); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 332, 204); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 332, 204, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 332, 204); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 338, 194); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 338, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 338, 194); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 339, 141); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 339, 141, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 339, 141); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 333, 183); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 333, 183, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 333, 183); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 328, 202); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 328, 202); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 328, 202, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 328, 202); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 329, 192, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 331, 177, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 180, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 166, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 151, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 136, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 2, 124, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 2, 113, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 2, 91, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 0, 77, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 2, 265, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 307, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 318, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 1, 343, true, false, false, false, false); // ce (w, ck) - Shift Key
+selectCodeEditor("arty-master.xdc", 6, 308); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 6, 308, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 6, 308); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 40, 274); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 40, 274, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 40, 274); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 314, 158); // ce (w, ck)
+typeControlKey((HResource) null, "arty-master.xdc", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 2); // k (j, ck)
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 144, 128); // ce (w, ck)
+// [GUI Memory]: 160 MB (+3361kb) [00:08:01]
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "qspi_dq_0"); // l (aQ, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (ck): Out-of-Context module run and Synthesis run are Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_NO, "No"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Out-of-Context module run and Synthesis run are Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// Tcl Message: launch_runs impl_1 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 169 MB (+468kb) [00:08:24]
+// Tcl Message: [Sat Apr 13 01:16:06 2019] Launched impl_1... Run output will be captured here: /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 17 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// Elapsed time: 39 seconds
+selectCodeEditor("sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v", 469, 141); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,763 MB. GUI used memory: 65 MB. Current time: 4/13/19 1:16:47 AM PDT
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1162ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 1024ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1466 ms to process. Increasing delay to 2000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 467ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1391 ms. Increasing delay to 3000 ms.
+// WARNING: HTimer (StateMonitor Timer) is taking 1285ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2506 ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6623 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6945 ms. Increasing delay to 3000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 3102ms to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3092 ms. Increasing delay to 5000 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 623ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3044 ms. Increasing delay to 6000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 5417ms to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3601 ms. Increasing delay to 4000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking 1107ms to process. Increasing delay to 6000 ms.
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 2225ms to process. Increasing delay to 3000 ms.
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 333 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_NO, "No"); // a (A)
+// f (ck): Launch Runs: addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Apr 13 01:22:26 2019] Launched impl_1... Run output will be captured here: /home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// WARNING: HTimer (StateMonitor Timer) is taking 1259ms to process. Increasing delay to 5000 ms.
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 308 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// PAPropertyPanels.initPanels (arty-master.xdc) elapsed time: 0.3s
+// Tcl Message: open_hw 
+// aI (ck): Feedback Request: addNotify
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// Elapsed time: 135 seconds
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_NO, "No"); // a (aI)
+dismissDialog("Feedback Request"); // aI (ck)
+selectButton("PAResourceTtoZ.TouchpointSurveyDialog_USE_TOOLS_OPTIONS_WINDOWS_BEHAVIOR_OK", "OK"); // JButton (A, G)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:18:37     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+dismissDialog("Auto Connect"); // bx (ck)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 23 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// bx (ck):  Auto Connect : addNotify
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/201612300081 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7k325t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/tanqinhan/Desktop/riscv/RISCV-k7/RISCV-k7.runs/impl_1/E300ArtyDevKitFPGAChip.bit} [get_hw_devices xc7k325t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7k325t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 6880.820 ; gain = 0.000 ; free physical = 2408 ; free virtual = 11071 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 12 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Program Device"); // bx (ck)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/201612300081 
+// n (ck): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 14 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (ck)
+// Elapsed time: 210 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // aa (ck)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.xpr"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// bx (ck):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_No", "No"); // JButton (A, G)
+// Opening Vivado Project: /home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.xpr. Version: Vivado v2018.2 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project {/home/tanqinhan/Desktop/vivado projects/rocket-sword/rocket-sword.xpr} 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 1,785 MB (+2176kb) [00:27:01]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,793 MB. GUI used memory: 74 MB. Current time: 4/13/19 1:34:46 AM PDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Path.S/Desktop/新建文件夹/rocket-sword' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/tanqinhan/Desktop/vivado/Vivado/2018.2/data/ip'. 
+// Project name: rocket-sword; location: /home/tanqinhan/Desktop/vivado projects/rocket-sword; part: xc7a35tftg256-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 6923.203 ; gain = 42.383 ; free physical = 167 ; free virtual = 9809 
+// Elapsed time: 19 seconds
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// Elapsed time: 71 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 4); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("arty-master.xdc", 375, 202); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 375, 202, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 375, 202); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 395, 183); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 395, 183, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 395, 183); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 398, 224); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 287, 129); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 287, 129, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 287, 129); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 346, 223); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 346, 223, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 346, 223); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 348, 204); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 348, 204, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 348, 204); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 351, 191); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 351, 191, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 351, 191); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 361, 170); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 361, 170, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 361, 170); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 364, 162); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 364, 162, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("arty-master.xdc", 364, 162); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 364, 178); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "arty-master.xdc", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "arty-master.xdc", 1); // k (j, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectCodeEditor("arty-master.xdc", 137, 174); // ce (w, ck)
+selectCodeEditor("arty-master.xdc", 149, 138); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (freedom.rocket.system.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (freedom.rocket.system.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("freedom.rocket.system.v", 98, 138); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,862 MB. GUI used memory: 92 MB. Current time: 4/13/19 1:37:23 AM PDT
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "100140000"); // l (aQ, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // l (aQ, ck)
+selectCodeEditor("freedom.rocket.system.v", 155, 142); // ce (w, ck)
+// Elapsed time: 241 seconds
+selectCodeEditor("freedom.rocket.system.v", 486, 214); // ce (w, ck)
+// Elapsed time: 448 seconds
+selectCodeEditor("freedom.rocket.system.v", 78, 112); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("freedom.rocket.system.v", 112, 196); // ce (w, ck)
+selectCodeEditor("freedom.rocket.system.v", 112, 196, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("freedom.rocket.system.v", 112, 196); // ce (w, ck)
+selectCodeEditor("freedom.rocket.system.v", 111, 212); // ce (w, ck)
+selectCodeEditor("freedom.rocket.system.v", 111, 212, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("freedom.rocket.system.v", 111, 212); // ce (w, ck)
+selectCodeEditor("freedom.rocket.system.v", 79, 415); // ce (w, ck)
+selectCodeEditor("freedom.rocket.system.v", 202, 388); // ce (w, ck)
+selectCodeEditor("freedom.rocket.system.v", 126, 209); // ce (w, ck)
+// PAPropertyPanels.initPanels (reset_sys.xci) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (freedom.rocket.system.v), ip_reset_sys : reset_sys (reset_sys.xci)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (freedom.rocket.system.v), E300ArtyDevKitPlatform : E300ArtyDevKitPlatform (sifive.freedom.everywhere.e300artydevkit.E300ArtyDevKitConfig.v)]", 4, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, E300ArtyDevKitFPGAChip (freedom.rocket.system.v), fpga_power_on : PowerOnResetFPGAOnly (PowerOnResetFPGAOnly.v)]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 10, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, arty-master.xdc]", 10, false, false, false, false, false, true); // B (D, ck) - Double Click

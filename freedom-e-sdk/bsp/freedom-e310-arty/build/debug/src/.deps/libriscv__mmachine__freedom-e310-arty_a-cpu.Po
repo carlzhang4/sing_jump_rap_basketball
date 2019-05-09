@@ -1,0 +1,89 @@
+src/libriscv__mmachine__freedom-e310-arty_a-cpu.o: \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/src/cpu.c \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/cpu.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.2.0/include/stdint.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/stdint.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/machine/_default_types.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/sys/features.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/_newlib_version.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/sys/_intsup.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/sys/_stdint.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/interrupt.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.2.0/include/stddef.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/machine.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/bsp/freedom-e310-arty/metal.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/fixed-clock.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/compiler.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/clock.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/riscv,clint0.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/riscv,cpu.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/riscv,plic0.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/pmp.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,local-external-interrupts0.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,gpio0.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/gpio.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,spi0.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/io.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/spi.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,uart0.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/uart.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,gpio-leds.h \
+ /home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/led.h
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/cpu.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.2.0/include/stdint.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/stdint.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/machine/_default_types.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/sys/features.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/_newlib_version.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/sys/_intsup.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/include/sys/_stdint.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/interrupt.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.2.0/include/stddef.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/machine.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/bsp/freedom-e310-arty/metal.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/fixed-clock.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/compiler.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/clock.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/riscv,clint0.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/riscv,cpu.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/riscv,plic0.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/pmp.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,local-external-interrupts0.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,gpio0.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/gpio.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,spi0.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/io.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/spi.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,uart0.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/uart.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/drivers/sifive,gpio-leds.h:
+
+/home/tanqinhan/Desktop/riscv/freedom-e-sdk/freedom-metal/metal/led.h:
