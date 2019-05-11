@@ -100,6 +100,18 @@ class PS2 extends Module{
     io.ready := (w_ptr =/= r_ptr)
     io.data := fifo(r_ptr)
 
+    val ps2q = Module(new Queue(8,8))
+
+    ps2q.io.enq <> (buffer>>1.U) & 0x11111111    //todo
+
+    regmap(         //todo
+    0x00-> RegFieldGroup("ps2data",Some("Transmit data"),
+                           NonBlockingEnqueue(data)),
+    0x04-> RegFieldGroup("rxdata",Some("Receive data"),
+                           NonBlockingDequeue(rxq.io.deq)),
+
+    )
+
     printf(p"${io.ps2_clk}  ")
     printf(p"$sampling  ")
     printf(p"$count  ")
