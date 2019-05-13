@@ -43,6 +43,9 @@ class E300DevKitPeripherals extends Config((site, here, up) => {
   case PeripheryUARTKey => List(
     UARTParams(address = 0x10013000),
     UARTParams(address = 0x10023000))
+  case PeripheryPS2Key => List(
+    PS2Params(address = 0x10040000)
+  )
   case PeripheryI2CKey => List(
     I2CParams(address = 0x10016000))
   case PeripheryMockAONKey =>
