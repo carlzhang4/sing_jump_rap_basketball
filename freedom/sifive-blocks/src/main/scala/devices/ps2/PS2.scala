@@ -11,29 +11,38 @@ class PS2PortIO(val c: PS2Params) extends Bundle {  //todo
 
 
 object PS2{
-    def risingedge(x: Bool) = x && !RegNext(x)
+    val nextId = { var i = -1; () => { i += 1; i} }
 
-    def attach(params: PS2AttachParams): TLGPIO = {//todo
+    def attach(params: PS2AttachParams): TLPS2 = {//todo
     implicit val p = params.p
-    val name = s"gpio_${nextId()}"
+    val name = s"ps2_${nextId()}"
     val cbus = params.controlBus
-    val gpio = LazyModule(new TLGPIO(cbus.beatBytes, params.gpio))
-    gpio.suggestName(name)
+    val ps2 = LazyModule(new TLGPIO(cbus.beatBytes, params.ps2))
+    ps2.suggestName(name)
 
     cbus.coupleTo(s"device_named_$name") {
-      gpio.controlXing(params.controlXType) := TLFragmenter(cbus.beatBytes, cbus.blockBytes) := _
+      ps2.controlXing(params.controlXType) := TLFragmenter(cbus.beatBytes, cbus.blockBytes) := _
     }
-    params.intNode := gpio.intXing(params.intXType)
-    InModuleBody { gpio.module.clock := params.mclock.map(_.getWrappedValue).getOrElse(cbus.module.clock) }
-    InModuleBody { gpio.module.reset := params.mreset.map(_.getWrappedValue).getOrElse(cbus.module.reset) }
+    params.intNode := ps2.intXing(params.intXType)
+    InModuleBody { ps2.module.clock := params.mclock.map(_.getWrappedValue).getOrElse(cbus.module.clock) }
+    InModuleBody { ps2.module.reset := params.mreset.map(_.getWrappedValue).getOrElse(cbus.module.reset) }
 
-    gpio
+    ps2
+  }
+
+  def attachAndMakePort(params: PS2AttachParams): ModuleValue[PS2PortIO] = {
+    val ps2 = attach(params)
+    val ps2Node = ps2.ioNode.makeSink()(params.p)
+    InModuleBody { ps2Node.makeIO()(ValName(ps2.name)) }
   }
 }
 
 case class PS2Params( //todo
     address:BigInt
 )
+
+class TLPS2()(implicit p: Parameters)
+    extends PS2() with HasTLControlRegmap
 
 case class PS2AttachParams( //todo
   ps2: PS2Params,
