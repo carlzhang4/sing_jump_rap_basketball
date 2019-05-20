@@ -17,6 +17,7 @@ import sifive.blocks.devices.jtag._
 import sifive.blocks.devices.pwm._
 import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
+import sifive.blocks.devices.ps2._
 import sifive.blocks.devices.i2c._
 import sifive.blocks.devices.pinctrl._
 
@@ -73,16 +74,19 @@ class E300ArtyDevKitPlatform(implicit val p: Parameters) extends Module {
   // converters.
 
   val sys_uart = sys.uart
+  val sys_ps2 = sys.ps2
   val sys_pwm  = sys.pwm
   val sys_spi  = sys.spi
   val sys_i2c  = sys.i2c
 
   val uart_pins = p(PeripheryUARTKey).map { c => Wire(new UARTPins(() => PinGen()))}
+  val ps2_pins = p(PeripheryPS2Key).map { c => Wire(new PS2Pins(() => PinGen()))}
   val pwm_pins  = p(PeripheryPWMKey).map  { c => Wire(new PWMPins(() => PinGen(), c))}
   val spi_pins  = p(PeripherySPIKey).map  { c => Wire(new SPIPins(() => PinGen(), c))}
   val i2c_pins  = p(PeripheryI2CKey).map  { c => Wire(new I2CPins(() => PinGen()))}
 
   (uart_pins zip  sys_uart) map {case (p, r) => UARTPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
+  (ps2_pins zip  sys_ps2) map {case (p, r) => UARTPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
   (pwm_pins  zip  sys_pwm)  map {case (p, r) => PWMPinsFromPort(p, r) }
   (spi_pins  zip  sys_spi)  map {case (p, r) => SPIPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
   (i2c_pins  zip  sys_i2c)  map {case (p, r) => I2CPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
@@ -135,6 +139,10 @@ class E300ArtyDevKitPlatform(implicit val p: Parameters) extends Module {
   // UART1
   BasePinToIOF(uart_pins(1).rxd, iof_0(24))
   BasePinToIOF(uart_pins(1).txd, iof_0(25))
+
+  // PS2
+  BasePinToIOF(ps2_pins(0).ps2_clk, iof_0(18))
+  BasePinToIOF(ps2_pins(0).ps2_data, iof_0(19))
 
   //PWM
   BasePinToIOF(pwm_pins(0).pwm(0), iof_1(0) )

@@ -1,7 +1,14 @@
-package solutions
+package sifive.blocks.devices.ps2
 
+import Chisel._
 import chisel3._
+import freechips.rocketchip.config.Parameters
+import freechips.rocketchip.diplomacy._
+import freechips.rocketchip.interrupts._
+import freechips.rocketchip.regmapper._
+import freechips.rocketchip.tilelink._
 
+import sifive.blocks.util.{NonBlockingEnqueue, NonBlockingDequeue}
 import sifive.blocks.util.{NonBlockingEnqueue, NonBlockingDequeue} //todo
 
 class PS2PortIO(val c: PS2Params) extends Bundle {  //todo
@@ -41,8 +48,8 @@ case class PS2Params( //todo
     address:BigInt
 )
 
-class TLPS2()(implicit p: Parameters)
-    extends PS2() with HasTLControlRegmap
+class TLPS2(busWidthBytes: Int, params: PS2Params)(implicit p: Parameters)
+  extends PS2(busWidthBytes, params) with HasTLControlRegMap
 
 case class PS2AttachParams( //todo
   ps2: PS2Params,
@@ -54,33 +61,43 @@ case class PS2AttachParams( //todo
   mreset: Option[ModuleValue[Bool]] = None)
   (implicit val p: Parameters)
 
-class PS2 extends Module{
-    val io = IO(new Bundle{
-        val ps2_data = Input(Bool())
-        val ps2_clk = Input(UInt(1.W))
+abstract class PS2(busWidthBytes: Int, val c: PS2Params)
+    extends IORegisterRouter(
+      RegisterRouterParams(
+        name = "serial",
+        compat = Seq("sifive,ps2"), 
+        base = c.address,
+        beatBytes = busWidthBytes),
+      new PS2PortIO){
 
-        val data = Valid(Bits(width=9))  //todo
-    })
-
+//    val io = IO(new Bundle{
+//        val ps2_data = Input(Bool())
+//        val ps2_clk = Input(UInt(1.W))
+//        val data = Valid(Bits(width=9))  //todo
+//    })
+    //这里不需要io新定义ps2_data和ps2_clk，因为这个东西是在port里面的
+    //data要单独拿出来，因为PS2IOport里面没有这个东西
+    val data = Valid(Bits(width=9))
+    
     val buffer = RegInit(0.U(10.W))
     val count = RegInit(0.U(4.W))
     val ps2_clk_sync = RegInit(0.U(4.W))
 
-    ps2_clk_sync := (ps2_clk_sync  << 1.U) + io.ps2_clk
+    ps2_clk_sync := (ps2_clk_sync  << 1.U) + ps2_clk
     val sampling = Wire(UInt(1.W))
     sampling := (ps2_clk_sync === "b1100".U).asUInt.toBool  //1100
 
     val valid = Reg(init = Bool(false))
     valid := Bool(false)
-    io.data.valid := valid
+    data.valid := valid
 
     when(!io.clrn){
         count := 0.U
     }.elsewhen(sampling === 1.U){
         when(count === 10.U(4.W)){
-            when((buffer(0) === 0.U) && (io.ps2_data) && buffer.xorR){
-                io.data.bits := buffer>>1.U
-                io.data.bits := io.data.bits | "b100000000".U
+            when((buffer(0) === 0.U) && (ps2_data) && buffer.xorR){
+                data.bits := buffer>>1.U
+                data.bits := data.bits | "b100000000".U
                 valid := Bool(true)
                 // when((w_ptr+1.U(3.W)) =/= r_ptr){
                 //     fifo(w_ptr) := buffer>>1.U
@@ -91,12 +108,12 @@ class PS2 extends Module{
             }
             count := 0.U;
         }.otherwise{
-            buffer := (buffer - (buffer(count)<<count)) | (io.ps2_data<<count)
+            buffer := (buffer - (buffer(count)<<count)) | (ps2_data<<count)
             count := count + 1.U(4.W)
         }
     }
 
-    val data_queue = Module(new Queue(io.data.bits,8)) //todo
+    val data_queue = Module(new Queue(data.bits,8)) //todo
 
     regmap(         //todo
     0x00-> RegFieldGroup("ps2data",Some("Transmit ps2 data"),

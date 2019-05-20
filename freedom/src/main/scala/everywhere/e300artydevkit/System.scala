@@ -15,6 +15,7 @@ import sifive.blocks.devices.gpio._
 import sifive.blocks.devices.pwm._
 import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
+import sifive.blocks.devices.ps2._
 import sifive.blocks.devices.i2c._
 
 //-------------------------------------------------------------------------
@@ -26,6 +27,7 @@ class E300ArtyDevKitSystem(implicit p: Parameters) extends RocketSubsystem
     with HasPeripheryDebug
     with HasPeripheryMockAON
     with HasPeripheryUART
+    with HasPeripheryPS2
     with HasPeripherySPIFlash
     with HasPeripherySPI
     with HasPeripheryGPIO
@@ -38,6 +40,7 @@ class E300ArtyDevKitSystemModule[+L <: E300ArtyDevKitSystem](_outer: L)
   extends RocketSubsystemModuleImp(_outer)
     with HasPeripheryDebugModuleImp
     with HasPeripheryUARTModuleImp
+    with HasPeripheryPS2ModuleImp
     with HasPeripherySPIModuleImp
     with HasPeripheryGPIOModuleImp
     with HasPeripherySPIFlashModuleImp

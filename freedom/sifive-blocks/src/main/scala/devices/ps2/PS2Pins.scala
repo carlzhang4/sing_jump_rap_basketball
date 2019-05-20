@@ -18,7 +18,7 @@ object PS2PinsFromPort {
       val ps2_clk_t = pins.ps2_clk.inputPin()
       ps2.ps2_clk := SyncResetSynchronizerShiftReg(ps2_clk_t, syncStages, init = Bool(true), name = Some("ps2_clk_sync"))
       val ps2_data_t = pins.ps2_data.inputPin()
-      ps2.ps2_clk := SyncResetSynchronizerShiftReg(ps2_data_t, syncStages, init = Bool(true), name = Some("ps2_clk_sync"))
+      ps2.ps2_data := SyncResetSynchronizerShiftReg(ps2_data_t, syncStages, init = Bool(true), name = Some("ps2_clk_sync"))
     
     }
   }
