@@ -12,6 +12,7 @@ import freechips.rocketchip.tile._
 import sifive.blocks.devices.gpio._
 import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
+import sifive.blocks.devices.ps2._
 
 // Default FreedomU500Config
 class FreedomU500Config extends Config(

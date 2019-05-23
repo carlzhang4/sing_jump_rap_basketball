@@ -60,13 +60,15 @@ case class PS2AttachParams( //todo
   (implicit val p: Parameters)
 
 abstract class PS2(busWidthBytes: Int, val c: PS2Params)
+                  (implicit p: Parameters)
     extends IORegisterRouter(
       RegisterRouterParams(
         name = "serial",
         compat = Seq("sifive,ps2"), 
         base = c.address,
         beatBytes = busWidthBytes),
-      new PS2PortIO){
+      new PS2PortIO)
+      with HasInterruptSources{
 
 //    val io = IO(new Bundle{
 //        val ps2_data = Input(Bool())
@@ -75,13 +77,20 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
 //    })
     //这里不需要io新定义ps2_data和ps2_clk，因为这个东西是在port里面的
     //data要单独拿出来，因为PS2IOport里面没有这个东西
+    def nInterrupts = 1
+
+    ResourceBinding {
+    Resource(ResourceAnchors.aliases, "ps2").bind(ResourceAlias(device.label))
+  }
+
+    lazy val module = new LazyModuleImp(this) {
     val data = Valid(Bits(width=9))
     
     val buffer = Reg(init = UInt(0,10))
     val count = Reg(init = UInt(0,4))
     val ps2_clk_sync = Reg(init = UInt(0,4))
 
-    ps2_clk_sync := (ps2_clk_sync  << 1.U) + ps2_clk
+    ps2_clk_sync := (ps2_clk_sync  << 1.U) + port.ps2_clk
     val sampling = Wire(UInt(0,1))
     sampling := (ps2_clk_sync === "b1100".U).asUInt.toBool  //1100
 
@@ -91,7 +100,7 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
 
     when(sampling === 1.U){
         when(count === 10.U(4.W)){
-            when((buffer(0) === 0.U) && (ps2_data) && buffer.xorR){
+            when((buffer(0) === 0.U) && (port.ps2_data) && buffer.xorR){
                 data.bits := buffer>>1.U
                 data.bits := data.bits | "b100000000".U
                 valid := Bool(true)
@@ -104,7 +113,7 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
             }
             count := 0.U;
         }.otherwise{
-            buffer := (buffer - (buffer(count)<<count)) | (ps2_data<<count)
+            buffer := (buffer - (buffer(count)<<count)) | (port.ps2_data<<count)
             count := count + 1.U(4.W)
         }
     }
@@ -115,6 +124,7 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
     0x00-> RegFieldGroup("ps2data",Some("Transmit ps2 data"),
                            NonBlockingDequeue(data_queue.io.deq))
     )
+    }
 
 
 

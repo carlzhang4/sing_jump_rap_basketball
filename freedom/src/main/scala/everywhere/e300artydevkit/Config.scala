@@ -15,6 +15,7 @@ import sifive.blocks.devices.pwm._
 import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
 import sifive.blocks.devices.i2c._
+import sifive.blocks.devices.ps2._
 
 // Default FreedomEConfig
 class DefaultFreedomEConfig extends Config (

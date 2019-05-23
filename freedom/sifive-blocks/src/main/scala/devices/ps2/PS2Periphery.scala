@@ -11,7 +11,7 @@ trait HasPeripheryPS2 { this: BaseSubsystem =>
   val ps2Nodes = p(PeripheryPS2Key).map { ps => PS2.attach(PS2AttachParams(ps, pbus, ibus.fromAsync)).ioNode.makeSink }
 }
 
-trait HasPeripheryGPIOBundle {
+trait HasPeripheryPS2Bundle {
   val ps2: Seq[PS2PortIO]
 }
 

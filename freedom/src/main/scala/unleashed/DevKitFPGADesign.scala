@@ -19,6 +19,7 @@ import sifive.blocks.devices.msi._
 import sifive.blocks.devices.chiplink._
 import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
+import sifive.blocks.devices.ps2._
 import sifive.blocks.devices.gpio._
 import sifive.blocks.devices.pinctrl.{BasePin}
 
