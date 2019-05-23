@@ -1,0 +1,8 @@
+[2019-05-16 20:30:02,604] INFO org.github.dragos.vscode.Main$ - Starting server in /Users/tanqinhan/Desktop/study/Third Grade/SpringSummer/SystemIntegrated/sing_jump_rap_basketball/freedom
+[2019-05-16 20:30:02,604] INFO org.github.dragos.vscode.Main$ - Starting server in /Users/tanqinhan/Desktop/study/Third Grade/SpringSummer/SystemIntegrated/sing_jump_rap_basketball/freedom
+[2019-05-16 20:30:02,620] INFO org.github.dragos.vscode.Main$ - Classpath: /Users/tanqinhan/.vscode/extensions/dragos.scala-lsp-0.2.3/coursier
+[2019-05-16 20:30:02,620] INFO org.github.dragos.vscode.Main$ - Classpath: /Users/tanqinhan/.vscode/extensions/dragos.scala-lsp-0.2.3/coursier
+[2019-05-16 20:30:02,715] INFO langserver.core.MessageReader - End of stream, terminating thread
+[2019-05-16 20:30:02,715] INFO langserver.core.MessageReader - End of stream, terminating thread
+[2019-05-16 20:30:02,780] INFO org.github.dragos.vscode.EnsimeLanguageServer - Shutdown request
+[2019-05-16 20:30:02,780] INFO org.github.dragos.vscode.EnsimeLanguageServer - Shutdown request

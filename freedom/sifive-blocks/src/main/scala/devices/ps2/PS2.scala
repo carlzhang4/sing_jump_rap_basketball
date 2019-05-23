@@ -1,7 +1,6 @@
 package sifive.blocks.devices.ps2
 
 import Chisel._
-import chisel3._
 import freechips.rocketchip.config.Parameters
 import freechips.rocketchip.diplomacy._
 import freechips.rocketchip.interrupts._
@@ -9,9 +8,8 @@ import freechips.rocketchip.regmapper._
 import freechips.rocketchip.tilelink._
 
 import sifive.blocks.util.{NonBlockingEnqueue, NonBlockingDequeue}
-import sifive.blocks.util.{NonBlockingEnqueue, NonBlockingDequeue} //todo
 
-class PS2PortIO(val c: PS2Params) extends Bundle {  //todo
+class PS2PortIO extends Bundle {  //todo
   val ps2_clk = Bool(INPUT)
   val ps2_data = Bool(INPUT)
   }
@@ -24,7 +22,7 @@ object PS2{
     implicit val p = params.p
     val name = s"ps2_${nextId()}"
     val cbus = params.controlBus
-    val ps2 = LazyModule(new TLGPIO(cbus.beatBytes, params.ps2))
+    val ps2 = LazyModule(new TLPS2(cbus.beatBytes, params.ps2))
     ps2.suggestName(name)
 
     cbus.coupleTo(s"device_named_$name") {
@@ -79,21 +77,19 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
     //data要单独拿出来，因为PS2IOport里面没有这个东西
     val data = Valid(Bits(width=9))
     
-    val buffer = RegInit(0.U(10.W))
-    val count = RegInit(0.U(4.W))
-    val ps2_clk_sync = RegInit(0.U(4.W))
+    val buffer = Reg(init = UInt(0,10))
+    val count = Reg(init = UInt(0,4))
+    val ps2_clk_sync = Reg(init = UInt(0,4))
 
     ps2_clk_sync := (ps2_clk_sync  << 1.U) + ps2_clk
-    val sampling = Wire(UInt(1.W))
+    val sampling = Wire(UInt(0,1))
     sampling := (ps2_clk_sync === "b1100".U).asUInt.toBool  //1100
 
     val valid = Reg(init = Bool(false))
     valid := Bool(false)
     data.valid := valid
 
-    when(!io.clrn){
-        count := 0.U
-    }.elsewhen(sampling === 1.U){
+    when(sampling === 1.U){
         when(count === 10.U(4.W)){
             when((buffer(0) === 0.U) && (ps2_data) && buffer.xorR){
                 data.bits := buffer>>1.U
@@ -122,10 +118,10 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
 
 
 
-    printf(p"${io.ps2_clk}  ")
-    printf(p"$sampling  ")
-    printf(p"$count  ")
-    printf(p"${Binary(buffer)}  \n")
+    // printf(p"${io.ps2_clk}  ")
+    // printf(p"$sampling  ")
+    // printf(p"$count  ")
+    // printf(p"${Binary(buffer)}  \n")
     //printf(p"myVec(1) = ${fifo(1)}\n")
     //printf(p"overflow = ${overflow}\n")
     // printf(p"reg = $reg\n")
