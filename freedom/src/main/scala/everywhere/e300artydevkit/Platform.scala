@@ -86,7 +86,7 @@ class E300ArtyDevKitPlatform(implicit val p: Parameters) extends Module {
   val i2c_pins  = p(PeripheryI2CKey).map  { c => Wire(new I2CPins(() => PinGen()))}
 
   (uart_pins zip  sys_uart) map {case (p, r) => UARTPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
-  (ps2_pins zip  sys_ps2) map {case (p, r) => UARTPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
+  (ps2_pins zip  sys_ps2) map {case (p, r) => PS2PinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
   (pwm_pins  zip  sys_pwm)  map {case (p, r) => PWMPinsFromPort(p, r) }
   (spi_pins  zip  sys_spi)  map {case (p, r) => SPIPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
   (i2c_pins  zip  sys_i2c)  map {case (p, r) => I2CPinsFromPort(p, r, clock = clock, reset = reset, syncStages = 0)}
