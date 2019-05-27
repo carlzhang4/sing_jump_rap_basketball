@@ -81,6 +81,15 @@ class DevKitFPGADesign(wranglerNode: ClockAdapterNode)(implicit p: Parameters) e
     tlclock.bind(u.device)
   } }
 
+  // hook up PS2s, based on configuration and available overlays
+  val ps2Params = p(PeripheryPS2Key)
+  val ps2Overlays = p(PS2OverlayKey)
+  val ps2ParamsWithOverlays = ps2Params zip ps2Overlays
+  ps2ParamsWithOverlays.foreach { case (uparam, uoverlay) => {
+    val u = uoverlay(PS2OverlayParams(uparam, pbus, ibus.fromAsync))
+    tlclock.bind(u.device)
+  } }
+
   (p(PeripherySPIKey) zip p(SDIOOverlayKey)).foreach { case (sparam, soverlay) => {
     val s = soverlay(SDIOOverlayParams(sparam, pbus, ibus.fromAsync))
     tlclock.bind(s.device)

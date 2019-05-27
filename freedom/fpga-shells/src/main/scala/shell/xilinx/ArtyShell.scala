@@ -12,6 +12,7 @@ import sifive.blocks.devices.gpio._
 import sifive.blocks.devices.pwm._
 import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
+import sifive.blocks.devices.ps2._
 import sifive.blocks.devices.pinctrl.{BasePin}
 
 import sifive.fpgashells.ip.xilinx.{IBUFG, IOBUF, PULLUP, mmcm, reset_sys, PowerOnResetFPGAOnly}
@@ -69,6 +70,10 @@ abstract class ArtyShell(implicit val p: Parameters) extends RawModule {
   // UART0
   val uart_rxd_out = IO(Analog(1.W))
   val uart_txd_in  = IO(Analog(1.W))
+
+  // PS2
+  val ps2_data_out = IO(Analog(1.W))
+  val ps2_clk_out  = IO(Analog(1.W))
 
   // JA (Used for more generic GPIOs)
   val ja_0         = IO(Analog(1.W))
@@ -241,6 +246,14 @@ abstract class ArtyShell(implicit val p: Parameters) extends RawModule {
     if (!uartParams.isEmpty) {
       IOBUF(uart_rxd_out, dut.uart(0).txd)
       dut.uart(0).rxd := IOBUF(uart_txd_in)
+    }
+  }
+
+  def connectPS2(dut: HasPeripheryPS2ModuleImp): Unit = {
+    val ps2Params = p(PeripheryPS2Key)
+    if (!ps2Params.isEmpty) {
+      IOBUF(ps2_data_out, dut.ps2(0).ps2_data)
+      IOBUF(ps2_clk_out, dut.ps2(0).ps2_clk)
     }
   }
 
