@@ -83,8 +83,10 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
     Resource(ResourceAnchors.aliases, "ps2").bind(ResourceAlias(device.label))
   }
 
+    
     lazy val module = new LazyModuleImp(this) {
     val data = Valid(Bits(width=9))
+
     
     val buffer = Reg(init = UInt(0,10))
     val count = Reg(init = UInt(0,4))
@@ -102,7 +104,7 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
         when(count === 10.U(4.W)){
             when((buffer(0) === 0.U) && (port.ps2_data) && buffer.xorR){
                 data.bits := buffer>>1.U
-                data.bits := data.bits | "b100000000".U
+                // data.bits := data.bits | "b100000000".U
                 valid := Bool(true)
                 // when((w_ptr+1.U(3.W)) =/= r_ptr){
                 //     fifo(w_ptr) := buffer>>1.U

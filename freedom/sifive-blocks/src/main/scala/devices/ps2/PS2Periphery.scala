@@ -17,5 +17,5 @@ trait HasPeripheryPS2Bundle {
 
 trait HasPeripheryPS2ModuleImp extends LazyModuleImp with HasPeripheryPS2Bundle {//todo
   val outer: HasPeripheryPS2
-  val ps2 = outer.ps2Nodes.zipWithIndex.map { case(n,i) => n.makeIO()(ValName(s"gpio_$i")) }
+  val ps2 = outer.ps2Nodes.zipWithIndex.map { case(n,i) => n.makeIO()(ValName(s"ps2_$i")) }
 }
