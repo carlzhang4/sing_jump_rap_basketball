@@ -16,23 +16,23 @@ class PS2PortIO extends Bundle {  //todo
 
 
 object PS2{
-    val nextId = { var i = -1; () => { i += 1; i} }
+  val nextId = { var i = -1; () => { i += 1; i} }
 
-    def attach(params: PS2AttachParams): TLPS2 = {//todo
-    implicit val p = params.p
-    val name = s"ps2_${nextId()}"
-    val cbus = params.controlBus
-    val ps2 = LazyModule(new TLPS2(cbus.beatBytes, params.ps2))
-    ps2.suggestName(name)
+  def attach(params: PS2AttachParams): TLPS2 = {//todo
+      implicit val p = params.p
+      val name = s"ps2_${nextId()}"
+      val cbus = params.controlBus
+      val ps2 = LazyModule(new TLPS2(cbus.beatBytes, params.ps2))
+      ps2.suggestName(name)
 
-    cbus.coupleTo(s"device_named_$name") {
-      ps2.controlXing(params.controlXType) := TLFragmenter(cbus.beatBytes, cbus.blockBytes) := _
-    }
-    params.intNode := ps2.intXing(params.intXType)
-    InModuleBody { ps2.module.clock := params.mclock.map(_.getWrappedValue).getOrElse(cbus.module.clock) }
-    InModuleBody { ps2.module.reset := params.mreset.map(_.getWrappedValue).getOrElse(cbus.module.reset) }
+      cbus.coupleTo(s"device_named_$name") {
+        ps2.controlXing(params.controlXType) := TLFragmenter(cbus.beatBytes, cbus.blockBytes) := _
+      }
+      params.intNode := ps2.intXing(params.intXType)
+      InModuleBody { ps2.module.clock := params.mclock.map(_.getWrappedValue).getOrElse(cbus.module.clock) }
+      InModuleBody { ps2.module.reset := params.mreset.map(_.getWrappedValue).getOrElse(cbus.module.reset) }
 
-    ps2
+      ps2
   }
 
   def attachAndMakePort(params: PS2AttachParams): ModuleValue[PS2PortIO] = {
@@ -121,7 +121,7 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
     }
 
     val data_queue = Module(new Queue(data.bits,8)) //todo
-
+    data_queue.io.enq <> data;
     regmap(         //todo
     0x00-> RegFieldGroup("ps2data",Some("Transmit ps2 data"),
                            NonBlockingDequeue(data_queue.io.deq))
