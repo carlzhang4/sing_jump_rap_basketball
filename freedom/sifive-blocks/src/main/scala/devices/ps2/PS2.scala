@@ -85,43 +85,17 @@ abstract class PS2(busWidthBytes: Int, val c: PS2Params)
 
     
     lazy val module = new LazyModuleImp(this) {
-    val data = Valid(Bits(width=9))
+      
+    val ps2rxm = Module(new PS2Rx())
 
+    val data_queue = Module(new Queue(ps2rxm.io.data.bits,8)) //todo
+
+
+    ps2rxm.io.ps2_clk := port.ps2_clk
+    ps2rxm.io.ps2_data := port.ps2_data
+    data_queue.io.enq <> ps2rxm.io.data;
     
-    val buffer = Reg(init = UInt(0,10))
-    val count = Reg(init = UInt(0,4))
-    val ps2_clk_sync = Reg(init = UInt(0,4))
-
-    ps2_clk_sync := (ps2_clk_sync  << 1.U) + port.ps2_clk
-    val sampling = Wire(UInt(0,1))
-    sampling := (ps2_clk_sync === "b1100".U).asUInt.toBool  //1100
-
-    val valid = Reg(init = Bool(false))
-    valid := Bool(false)
-    data.valid := valid
-
-    when(sampling === 1.U){
-        when(count === 10.U(4.W)){
-            when((buffer(0) === 0.U) && (port.ps2_data) && buffer.xorR){
-                data.bits := buffer>>1.U
-                // data.bits := data.bits | "b100000000".U
-                valid := Bool(true)
-                // when((w_ptr+1.U(3.W)) =/= r_ptr){
-                //     fifo(w_ptr) := buffer>>1.U
-                //     w_ptr := w_ptr + 1.U(3.W)
-                // }.otherwise{
-                //     overflow := 1.U
-                // }
-            }
-            count := 0.U;
-        }.otherwise{
-            buffer := (buffer - (buffer(count)<<count)) | (port.ps2_data<<count)
-            count := count + 1.U(4.W)
-        }
-    }
-
-    val data_queue = Module(new Queue(data.bits,8)) //todo
-    data_queue.io.enq <> data;
+    
     regmap(         //todo
     0x00-> RegFieldGroup("ps2data",Some("Transmit ps2 data"),
                            NonBlockingDequeue(data_queue.io.deq))
