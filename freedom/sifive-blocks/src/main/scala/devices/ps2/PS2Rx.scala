@@ -25,7 +25,7 @@ class PS2Rx() extends Module {
 
     when(sampling === 1.U){
         when(count === 10.U(4.W)){
-            when((buffer(0) === 0.U) && (io.ps2_data) && buffer.xorR){
+            when((buffer(0) === 0.U) && (io.ps2_data===1.U) && buffer.xorR){
                 io.data.bits := buffer>>1.U
                 // data.bits := data.bits | "b100000000".U
                 valid := Bool(true)

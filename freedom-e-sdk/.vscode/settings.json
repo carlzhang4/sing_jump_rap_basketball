@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "sifive,uart0.h": "c"
+        "sifive,uart0.h": "c",
+        "sifive,gpio0.h": "c",
+        "sifive,ps20.h": "c"
     }
 }

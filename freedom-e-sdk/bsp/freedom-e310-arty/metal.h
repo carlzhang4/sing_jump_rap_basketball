@@ -53,6 +53,7 @@
 #include <metal/drivers/sifive,gpio0.h>
 #include <metal/drivers/sifive,spi0.h>
 #include <metal/drivers/sifive,uart0.h>
+#include <metal/drivers/sifive,ps20.h>
 #include <metal/drivers/sifive,gpio-leds.h>
 
 /* From clock@0 */
@@ -234,6 +235,15 @@ struct __metal_driver_sifive_uart0 __metal_dt_serial_10013000 = {
     .interrupt_parent = &__metal_dt_interrupt_controller_c000000.controller,
     .num_interrupts = METAL_MAX_UART_INTERRUPTS,
     .interrupt_line = 5UL,
+};
+
+struct __metal_driver_sifive_ps20 __metal_dt_serial_10013000 = {
+    .vtable = &__metal_driver_vtable_sifive_ps20,
+    .ps2.vtable = &__metal_driver_vtable_sifive_ps20.ps2,
+    .control_base = 268697600UL,
+    .control_size = 4096UL,
+    .clock = NULL,
+    .pinmux = NULL,
 };
 
 /* From led@0red */
