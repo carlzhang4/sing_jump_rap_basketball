@@ -5,13 +5,6 @@
 
 /* The byte offsets of the various ps2 registers. */
 #define PS2_REG_DATA         0x00
-// #define ps2_REG_RXDATA         0x04
-// #define ps2_REG_TXCTRL         0x08
-// #define ps2_REG_RXCTRL         0x0c
-// #define ps2_REG_RXCNT          (ps2_REG_RXCTRL + 2)
-// #define ps2_REG_IE             0x10
-// #define ps2_REG_IP             0x14
-// #define ps2_REG_DIV            0x18
 
 /* PS2DATA Fields */
 #define PS2_DATAEN               (1 <<  0)
